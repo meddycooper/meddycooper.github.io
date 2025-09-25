@@ -10,6 +10,10 @@ body {
 header {
   text-align: center;
   margin-bottom: 40px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
 }
 
 h1 {
@@ -20,6 +24,9 @@ h1 {
 h2 {
   font-size: 1.8rem;
   margin-top: 2rem;
+  border-bottom: 2px solid #2575fc;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 h3 {
@@ -29,10 +36,16 @@ h3 {
 
 .project {
   border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 a {
@@ -44,9 +57,39 @@ a:hover {
   text-decoration: underline;
 }
 
+section {
+  background-color: #f9f9f9;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+ul {
+  list-style-type: square; /* or circle */
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
 footer {
   text-align: center;
   margin-top: 50px;
   font-size: 0.9rem;
   color: #555;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+@media (max-width: 600px) {
+  body {
+    margin: 20px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
