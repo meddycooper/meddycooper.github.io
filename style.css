@@ -105,3 +105,97 @@ footer {
     font-size: 1.5rem;
   }
 }
+
+/* ==============================
+   Book Review Showcase Page Styles
+   ============================== */
+
+.book-header {
+  background-color: #212529;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.book-header h1 {
+  margin-bottom: 0.3rem;
+}
+
+.book-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.caption h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #0d6efd;
+}
+
+.caption p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.book-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #212529;
+  color: white;
+  margin-top: 3rem;
+  border-radius: 12px;
+}
+
+.book-footer a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.book-footer a:hover {
+  text-decoration: underline;
+}
