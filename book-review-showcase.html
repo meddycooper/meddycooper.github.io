@@ -5,105 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Review Platform — Project Showcase | Meredith Cooper</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      margin: 0;
-    }
-
-    header {
-      background-color: #212529;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin-bottom: 0.3rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .intro {
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .gallery-item {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .caption {
-      padding: 1rem;
-      text-align: center;
-      background-color: #fff;
-    }
-
-    .caption h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      color: #0d6efd;
-    }
-
-    .caption p {
-      font-size: 0.95rem;
-      color: #555;
-      margin: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      background-color: #212529;
-      color: white;
-      margin-top: 3rem;
-    }
-
-    footer a {
-      color: #0d6efd;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
-  <header>
+  <header class="book-header">
     <h1>Book Review Platform</h1>
     <p>Advanced Web Development Assignment — Symfony, JWT API, Google Books Integration</p>
   </header>
@@ -125,7 +29,6 @@
     </section>
 
     <section class="gallery">
-      <!-- Example Screenshot 1 -->
       <div class="gallery-item">
         <img src="images/LoginPage.png" alt="Login Page Screenshot">
         <div class="caption">
@@ -134,25 +37,22 @@
         </div>
       </div>
 
-      <!-- Example Screenshot 2 -->
       <div class="gallery-item">
         <img src="images/book.png" alt="Book List Page Screenshot">
         <div class="caption">
           <h3>Book List</h3>
-          <p>Displays all available books, This is the main page.</p>
+          <p>Displays all available books — this is the main page.</p>
         </div>
       </div>
 
-      <!-- Example Screenshot 3 -->
       <div class="gallery-item">
         <img src="images/bookPage.png" alt="Book Details Screenshot">
         <div class="caption">
           <h3>Book Details</h3>
-          <p>Shows detailed information about each book, includes cover images.</p>
+          <p>Shows detailed information about each book, including cover images.</p>
         </div>
       </div>
 
-      <!-- Example Screenshot 4 -->
       <div class="gallery-item">
         <img src="images/bookPageReviewsWithComments.png" alt="Book Page with reviews Screenshot">
         <div class="caption">
@@ -161,16 +61,14 @@
         </div>
       </div>
 
-      <!-- Example Screenshot 5 -->
       <div class="gallery-item">
         <img src="images/AdminDashboardPage.png" alt="Admin Dashboard Screenshot">
         <div class="caption">
           <h3>Admin Dashboard</h3>
-          <p>Role-based management for users, reviews, and books. There is also analytics of the website.</p>
+          <p>Role-based management for users, reviews, and books. Includes website analytics.</p>
         </div>
       </div>
 
-      <!-- Example Screenshot 6 -->
       <div class="gallery-item">
         <img src="images/SearchGoogleBooksPage.png" alt="Google Books Integration Screenshot">
         <div class="caption">
@@ -181,7 +79,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="book-footer">
     <p><a href="student-projects.html">← Back to All Student Projects</a></p>
     <p>&copy; 2025 Meredith Cooper | Portfolio Showcase</p>
   </footer>
