@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaFX Design Pattern Game — Project Showcase | Meredith Cooper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="book-header">
+    <h1>JavaFX Design Pattern Educational Game</h1>
+    <p>Design Patterns Assignment — JavaFX, Delegation, Strategy, Observer Patterns</p>
+  </header>
 
+  <main class="container">
+    <section class="intro">
+      <p>
+        This project was developed as part of the <strong>Design Patterns</strong> module and demonstrates the
+        use of <strong>object-oriented design</strong> and multiple <strong>software design patterns</strong> in a
+        JavaFX-based educational game. The game teaches children about wildlife habitats and the butterfly lifecycle
+        through interactive canvas-based animations and quizzes.
+      </p>
+
+      <p>
+        Built using <strong>Java</strong> and <strong>JavaFX</strong> in <strong>Eclipse</strong> with <strong>Maven</strong>,
+        the game applies <strong>Delegation</strong>, <strong>Strategy</strong>, and <strong>Observer</strong> patterns to
+        manage interactions, object behaviour, and user interface updates. The architecture allows for easy extension and
+        addition of new animals, questions, or learning scenarios.
+      </p>
+
+      <p>
+        The screenshots below showcase key aspects of the project — from the interactive map and information messages to
+        the butterfly lifecycle simulation and quiz feature.
+      </p>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="images/map-display.png" alt="Map Display Screenshot">
+        <div class="caption">
+          <h3>Interactive Map</h3>
+          <p>Players can click on different habitats and animals to learn about their environments and species.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/info-messages.png" alt="Informational Messages Screenshot">
+        <div class="caption">
+          <h3>Informational Messages</h3>
+          <p>Pop-up messages provide educational facts about each animal and its habitat, reinforcing player learning.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/butterfly-lifecycle.png" alt="Butterfly Lifecycle Screenshot">
+        <div class="caption">
+          <h3>Butterfly Lifecycle Simulation</h3>
+          <p>Demonstrates the <strong>Delegation</strong> pattern as the Egg object transitions through stages — egg, pupa, butterfly.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/multiple-choice.png" alt="Multiple Choice Question Screenshot">
+        <div class="caption">
+          <h3>Interactive Quiz</h3>
+          <p>Includes multiple-choice questions assessing understanding of the lifecycle and wildlife topics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details">
+      <h2>Key Design Features</h2>
+      <ul>
+        <li><strong>Delegation Pattern:</strong> Used in the <code>Egg</code> class to transition between growth stages.</li>
+        <li><strong>Strategy Pattern:</strong> Enables interchangeable behaviour for different butterfly lifecycle stages.</li>
+        <li><strong>Observer Pattern:</strong> Zoo class observes user interactions and updates knowledge counters.</li>
+        <li><strong>Extensible Architecture:</strong> Easily add new animals, habitats, or lifecycle stages using interfaces and inheritance.</li>
+        <li><strong>Educational Focus:</strong> Combines interactivity, visual learning, and reinforcement through quizzes.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="book-footer">
+    <p><a href="student-projects.html">← Back to All Student Projects</a></p>
+    <p>&copy; 2025 Meredith Cooper | Portfolio Showcase</p>
+  </footer>
+</body>
+</html>
