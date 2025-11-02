@@ -4,41 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scrum & Kanban Assignments — Meredith Cooper</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f9f9f9; }
-    .container { width: 90%; max-width: 1000px; margin: auto; padding: 2rem 0; }
-    header { background: #004080; color: white; padding: 1.5rem; border-radius: 5px; margin-bottom: 2rem; }
-    header h1 { margin: 0 0 0.5rem; }
-    .section-header { background: #e6f0ff; padding: 0.5rem; border-left: 5px solid #004080; margin-top: 2rem; }
-    h2 { color: #004080; margin-top: 1.5rem; }
-    ul { margin-left: 1.5rem; }
-    pre { background: #f1f1f1; padding: 1rem; overflow-x: auto; }
-    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
-    table, th, td { border: 1px solid #ccc; }
-    th, td { padding: 0.5rem; text-align: left; }
-    details { margin-bottom: 1rem; }
-    summary { cursor: pointer; font-weight: bold; color: #004080; }
-    footer { text-align: center; padding: 1rem; background: #004080; color: white; margin-top: 2rem; border-radius: 5px; }
-    a { color: #004080; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- ===========================
-         ASSIGNMENT 1: Scrum vs Kanban
-         =========================== -->
-    <header>
-      <h1>Scrum vs Kanban Analysis</h1>
-      <p>Assignment 1 — Comparison Report at TG-Code</p>
-    </header>
-    <section>
-      <h2>Project Overview</h2>
+  <header class="book-header">
+    <h1>Scrum & Kanban Assignments</h1>
+    <p>Assignment 1 & 2 — TG-Code & TechSage Reports</p>
+  </header>
+  <main class="container">
+    <!-- Assignment 1: Scrum vs Kanban -->
+    <section class="intro">
+      <h2>Assignment 1: Scrum vs Kanban Analysis</h2>
       <p>This assessment involved producing a research-based technical report comparing <strong>Scrum</strong> and <strong>Kanban</strong> within TG-Code, a company specialising in business information systems. The report critically evaluated Kanban’s potential to enhance software quality, collaboration, and productivity, and provided SMART recommendations for integrating Kanban into an established Scrum environment.</p>
     </section>
     <section>
-      <h2>Key Focus Areas</h2>
+      <h3>Key Focus Areas</h3>
       <ul>
         <li>Comparison of Scrum vs Kanban in terms of communication, collaboration, and productivity.</li>
         <li>Evaluation of Kanban’s strengths and weaknesses in software development teams.</li>
@@ -46,22 +26,22 @@
       </ul>
     </section>
     <section>
-      <h2>Background & Context</h2>
+      <h3>Background & Context</h3>
       <p>TG-Code operates with over 150 software developers, primarily using Scrum. The CIO requested analysis of Kanban to potentially improve software quality and delivery, while the CFO raised concerns about productivity impacts. Research included real-world studies and key academic sources such as Oza et al. (2013) and Lei et al. (2017), as well as hybrid agile best practices.</p>
     </section>
     <section>
-      <h2>Kanban Strengths & Weaknesses</h2>
+      <h3>Kanban Strengths & Weaknesses</h3>
       <ul>
         <li><strong>Strengths:</strong> Visual workflow enhances transparency and coordination; reduces multitasking; flexible for maintenance and continuous delivery.</li>
         <li><strong>Weaknesses:</strong> Lack of formal structure may reduce predictability; success depends on team discipline and metrics tracking; may initially reduce velocity during transition.</li>
       </ul>
     </section>
     <section>
-      <h2>Scrum Comparison</h2>
+      <h3>Scrum Comparison</h3>
       <p>Scrum promotes clear sprint cycles and role accountability, but rigid sprint planning can delay bug fixes or urgent work.</p>
     </section>
     <section>
-      <h2>SMART Recommendations for TG-Code</h2>
+      <h3>SMART Recommendations for TG-Code</h3>
       <ul>
         <li><strong>Specific:</strong> Introduce Kanban boards within existing Scrum teams to visualise WIP limits.</li>
         <li><strong>Measurable:</strong> Track lead and cycle time for six sprints to evaluate quality and throughput.</li>
@@ -71,22 +51,16 @@
       </ul>
     </section>
     <section>
-      <h2>Conclusion</h2>
+      <h3>Conclusion</h3>
       <p>Kanban can complement Scrum by increasing visibility, improving workflow, and enhancing communication. A hybrid “Scrumban” approach is recommended, enabling continuous improvement while maintaining Scrum’s structured delivery framework.</p>
     </section>
-    <!-- ===========================
-         ASSIGNMENT 2: Secure-by-Design in Scrum
-         =========================== -->
-    <header style="margin-top: 50px;">
-      <h1>Secure-by-Design in Scrum</h1>
-      <p>Assignment 2 — Security Integration Report at TechSage</p>
-    </header>
-    <section>
-      <h2>Project Overview</h2>
+    <!-- Assignment 2: Secure-by-Design in Scrum -->
+    <section class="intro">
+      <h2>Assignment 2: Secure-by-Design in Scrum</h2>
       <p>This assessment explored how <strong>Security Design Analysis (SDA)</strong> can be integrated into Scrum practices at TechSage, a Manchester-based software company. The goal was to embed secure-by-design principles into agile workflows without compromising flexibility or speed.</p>
     </section>
     <section>
-      <h2>Key Contributions</h2>
+      <h3>Key Contributions</h3>
       <ul>
         <li>Identification of challenges in integrating SDA into Scrum.</li>
         <li>Critical evaluation of Microsoft SDL for Agile, OWASP ASVS, and Security Backlogs.</li>
@@ -94,7 +68,7 @@
       </ul>
     </section>
     <section>
-      <h2>Integration Methods</h2>
+      <h3>Integration Methods</h3>
       <table>
         <tr>
           <th>Method</th>
@@ -123,7 +97,7 @@
       </table>
     </section>
     <section>
-      <h2>Challenges</h2>
+      <h3>Challenges</h3>
       <ul>
         <li>Agile’s focus on iteration limits early security planning.</li>
         <li>Teams often lack security specialists.</li>
@@ -133,7 +107,7 @@
       </ul>
     </section>
     <section>
-      <h2>SMART Recommendations</h2>
+      <h3>SMART Recommendations</h3>
       <ul>
         <li>Run threat modelling every two sprints.</li>
         <li>Assign Security Champions to teams.</li>
@@ -143,14 +117,14 @@
       </ul>
     </section>
     <section>
-      <h2>Outcome & Conclusion</h2>
+      <h3>Outcome & Conclusion</h3>
       <p>Embedding SDA in Scrum improved security awareness, compliance, and product reliability. Integrating security into agile ceremonies enables “secure agility,” balancing speed and protection. Agile security works best through ongoing, embedded practices rather than external audits alone.</p>
     </section>
     <p style="text-align:center; margin-top:2rem;">
-      <a href="index.html">&larr; Back to Portfolio</a>
+      <a href="student-projects.html">&larr; Back to All Student Projects</a>
     </p>
-  </div>
-  <footer>
+  </main>
+  <footer class="book-footer">
     <p>Scrum & Kanban Assignments — Meredith Cooper</p>
   </footer>
 </body>
