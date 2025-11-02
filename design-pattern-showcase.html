@@ -13,33 +13,45 @@
   </header>
 
   <main class="container">
-    <section class="intro">
-      <p>
-        This project was developed as part of the <strong>Design Patterns</strong> module and demonstrates the
-        use of <strong>object-oriented design</strong> and multiple <strong>software design patterns</strong> in a
-        JavaFX-based educational game. The game teaches children about wildlife habitats and the butterfly lifecycle
-        through interactive canvas-based animations and a quiz. This project is more about the code than the game itself.
-        I used images from the internet to create the game. 
-      </p>
 
+    <!-- PROJECT OVERVIEW -->
+    <section class="intro">
+      <h2>Project Overview</h2>
       <p>
-        Built using <strong>Java</strong> and <strong>JavaFX</strong> in <strong>Eclipse</strong> with <strong>Maven</strong>,
-        the game applies <strong>Delegation</strong>, <strong>Strategy</strong>, and <strong>Observer</strong> patterns to
-        manage interactions, object behaviour, and user interface updates. The architecture allows for easy extension and
-        addition of new animals, questions, or learning scenarios.
+        This educational game was developed as part of the <strong>Design Patterns</strong> module and focuses on applying 
+        object-oriented principles and multiple software design patterns in a JavaFX-based application.  
+        The game introduces children to <strong>wildlife habitats</strong> and the <strong>butterfly lifecycle</strong> through an 
+        interactive zoo environment, animated lifecycle transitions, and a quiz system to reinforce learning.
       </p>
       <p>
-        The screenshots below showcase key aspects of the project — from the interactive map and information messages to
-        the butterfly lifecycle simulation and quiz feature.
+        The goal of the assignment was not to produce game art, but to demonstrate effective use of <strong>Delegation</strong>,
+        <strong>Strategy</strong>, and <strong>Observer</strong> patterns in a modular, extensible architecture where new animals,
+        interactions, and learning scenarios can be added with minimal changes to existing code.
       </p>
     </section>
 
+    <!-- TECH STACK BADGES -->
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="tech-badges">
+        <span class="badge">Java</span>
+        <span class="badge">JavaFX</span>
+        <span class="badge">Maven</span>
+        <span class="badge">Eclipse IDE</span>
+        <span class="badge">OOP</span>
+        <span class="badge">Delegation Pattern</span>
+        <span class="badge">Strategy Pattern</span>
+        <span class="badge">Observer Pattern</span>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
     <section class="gallery">
       <div class="gallery-item">
         <img src="images/map-display.png" alt="Map Display Screenshot">
         <div class="caption">
-          <h3>Interactive Map</h3>
-          <p>Players can click on different habitats and animals to learn about their environments and species.</p>
+          <h3>Interactive Habitat Map</h3>
+          <p>Players click on different animals to learn about their behaviour, habitat and species.</p>
         </div>
       </div>
 
@@ -47,7 +59,7 @@
         <img src="images/info-messages.png" alt="Informational Messages Screenshot">
         <div class="caption">
           <h3>Informational Messages</h3>
-          <p>Pop-up messages provide educational facts about each animal and its habitat, reinforcing player learning.</p>
+          <p>Pop-up dialogs provide educational facts and track the player’s progress.</p>
         </div>
       </div>
 
@@ -55,7 +67,7 @@
         <img src="images/butterfly-lifecycle.png" alt="Butterfly Lifecycle Screenshot">
         <div class="caption">
           <h3>Butterfly Lifecycle Simulation</h3>
-          <p>Demonstrates the <strong>Delegation</strong> pattern as the Egg object transitions through stages — egg, pupa, butterfly.</p>
+          <p>Demonstrates the <strong>Delegation pattern</strong> as the Egg transitions through lifecycle stages.</p>
         </div>
       </div>
 
@@ -63,27 +75,95 @@
         <img src="images/multiple-choice.png" alt="Multiple Choice Question Screenshot">
         <div class="caption">
           <h3>Interactive Quiz</h3>
-          <p>Includes multiple-choice questions assessing understanding of the lifecycle and wildlife topics.</p>
+          <p>Multiple-choice questions test player understanding of ecosystems and life cycles.</p>
         </div>
       </div>
     </section>
 
+    <!-- KEY DESIGN FEATURES -->
     <section class="details">
       <h2>Key Design Features</h2>
       <ul>
-        <li><strong>Delegation Pattern:</strong> Used in the <code>Egg</code> class to transition between growth stages.</li>
-        <li><strong>Strategy Pattern:</strong> Enables interchangeable behaviour for different butterfly lifecycle stages.</li>
-        <li><strong>Observer Pattern:</strong> Zoo class observes user interactions and updates knowledge counters.</li>
-        <li><strong>Extensible Architecture:</strong> Easily add new animals, habitats, or lifecycle stages using interfaces and inheritance.</li>
-        <li><strong>Educational Focus:</strong> Combines interactivity, visual learning, and reinforcement through quizzes.</li>
+        <li><strong>Delegation Pattern:</strong> Used in the <code>Egg</code> class to transition between lifecycle stages (egg → pupa → butterfly) without rewriting logic.</li>
+        <li><strong>Strategy Pattern:</strong> Each lifecycle stage implements different behaviour while sharing the same interface.</li>
+        <li><strong>Observer Pattern:</strong> The Zoo controller listens for object interactions and updates UI elements such as knowledge score.</li>
+        <li><strong>Extensible Architecture:</strong> New animals, lifecycle models, or quiz content can be added by implementing shared interfaces.</li>
+        <li><strong>Education Focus:</strong> Mixes interactive learning, visual cues, and reinforcement through quiz assessment.</li>
       </ul>
-      <h2>For the future of the game I would</h2>
-      <ul>
-        <li>Make the map more interactive</li>
-        <li>Make the scoring system have questions attached to the information messages so it is more of a game</li>
-        <li>Actually create/draw the images used so that it is my own work</li>
-        <li>Make the quiz longer and add to the scoring system</li>
-        <li>Have an expanded map section which is much bigger and more mini games</li>
+    </section>
+
+    <!-- CODE EXAMPLES (COLLAPSIBLE) -->
+    <section id="code-examples">
+      <h2>Selected Code Examples</h2>
+
+      <details>
+        <summary><strong>Delegation Pattern — Butterfly Lifecycle (Egg.java)</strong></summary>
+        <pre><code>public class Egg extends GameObject implements ButterflyInterface {
+    ButterflyInterface delegate;
+    protected int age = 0;
+
+    public Egg(double x, double y, GraphicsContext gc) {
+        super(x, y, gc);
+        img = new Image(Egg.class.getResource("egg.jpeg").toExternalForm());
+        update();
+        delegate = this;
+    }
+
+    public void grow() {
+        age += 1;
+        if (age == 100) delegate = new Caterpillar(x, y, gc);
+        if (age == 200) delegate = new Pupa(x, y, gc);
+        if (age == 300) delegate = new Butterfly(x, y, gc);
+        delegate.update();
+    }
+}</code></pre>
+      </details>
+
+      <details>
+        <summary><strong>Observer-like Interaction Handling (Zoo.java)</strong></summary>
+        <pre><code>private void handleClick(MouseEvent event) {
+    double x = event.getX();
+    double y = event.getY();
+    for (GameObject obj : list) {
+        if (contains(x, y, obj.getX(), obj.getY(), obj.getImage())) {
+            showAlert(obj);
+            KnowledgeCount++;
+            if (KnowledgeCount >= 7) {
+                switchToButterflyApp();
+            } else {
+                updateKnowledgeText();
+            }
+            break;
+        }
+    }
+}</code></pre>
+      </details>
+
+      <details>
+        <summary><strong>Polymorphism via Animal Interface</strong></summary>
+        <pre><code>public interface AnimalInterface {
+    void update();
+}
+
+public class Bear extends GameObject implements AnimalInterface {
+    public Bear(double x, double y, GraphicsContext gc) {
+        super(x, y, gc);
+        img = new Image(Bear.class.getResource("bear.png").toExternalForm());
+        update();
+    }
+}</code></pre>
+      </details>
+    </section>
+
+    <!-- ROADMAP -->
+    <section>
+      <h2>Feature Roadmap</h2>
+      <ul class="roadmap">
+        <li><span>Planned:</span> Make the map more interactive with zoom & region highlighting.</li>
+        <li><span>Future:</span> Create original artwork instead of using placeholder images.</li>
+        <li><span>Future:</span> Expand the quiz system with scoring and difficulty levels.</li>
+        <li><span>Future:</span> Add mini-games linked to different habitats.</li>
+        <li><span>Future:</span> Add more animals & advanced ecosystem interactions.</li>
       </ul>
     </section>
   </main>
