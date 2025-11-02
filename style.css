@@ -362,7 +362,7 @@ pre {
 }
 
 .edu-section h2 {
-  color: #004080; /* matches portfolio headings */
+  color: #004080;
   margin-bottom: 0.5rem;
   font-size: 1.6rem;
 }
@@ -377,17 +377,19 @@ pre {
 .edu-details {
   display: flex;
   align-items: flex-start;
-  gap: 1rem; /* spacing between logo and text */
+  gap: 1rem;
   margin-top: 0.5rem;
   flex-wrap: wrap;
 }
 
 .edu-logo {
-  height: 60px;      /* consistent height */
-  width: auto;       /* maintain aspect ratio */
-  border-radius: 6px; /* optional: rounded corners */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle shadow */
+  height: 60px;          /* consistent height */
+  max-width: 150px;      /* prevent overflowing too wide */
+  width: auto;           /* maintain aspect ratio */
+  border-radius: 6px;    /* optional: rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   margin-bottom: 0.5rem;
+  object-fit: contain;   /* ensures logo fits without stretching */
 }
 
 .edu-details p {
@@ -405,7 +407,7 @@ pre {
   text-decoration: underline;
 }
 
-/* Ensure responsive layout for small screens */
+/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
   .edu-details {
     flex-direction: column;
@@ -413,5 +415,6 @@ pre {
   }
   .edu-logo {
     margin-bottom: 0.5rem;
+    max-width: 100%; /* ensure it never exceeds container width */
   }
 }
