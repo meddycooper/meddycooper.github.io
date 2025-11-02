@@ -3,49 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parcel Buddy – PHP MVC Delivery System</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Parcel Buddy — PHP MVC Delivery System | Meredith Cooper</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- PAGE HEADER -->
   <header class="book-header">
     <h1>Parcel Buddy</h1>
     <p>Client Server Systems Assignment (Level 5) — PHP MVC Delivery Management System</p>
   </header>
-  <div class="container">
+  <main class="container">
     <!-- INTRO SECTION -->
     <section class="intro">
       <p><strong>Parcel Buddy</strong> is a web-based parcel delivery management system built using the
-      <strong>Model–View–Controller (MVC)</strong> pattern. It allowed managers to assign parcels to drivers
+      <strong>Model–View–Controller (MVC)</strong> pattern. It allows managers to assign parcels to drivers
       and delivery staff to update parcel status, view routes, and interact with real-time maps.</p>
       <img src="images/parcel-login.png" alt="Parcel Buddy Login Page" class="project-image">
       <p style="text-align:center; font-size:0.9rem; color:#666;">(Login page preview – placeholder image)</p>
     </section>
     <!-- TECH STACK -->
-    <h2>Tech Stack</h2>
-    <div class="tech-badges">
-      <span class="badge">PHP (OOP, MVC)</span>
-      <span class="badge">MySQL</span>
-      <span class="badge">PDO</span>
-      <span class="badge">JavaScript (AJAX)</span>
-      <span class="badge">Leaflet.js</span>
-      <span class="badge">HTML/CSS</span>
-      <span class="badge">Bootstrap</span>
-    </div>
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="tech-badges">
+        <span class="badge">PHP (OOP, MVC)</span>
+        <span class="badge">MySQL</span>
+        <span class="badge">PDO</span>
+        <span class="badge">JavaScript (AJAX)</span>
+        <span class="badge">Leaflet.js</span>
+        <span class="badge">HTML/CSS</span>
+        <span class="badge">Bootstrap</span>
+      </div>
+    </section>
     <!-- FEATURES -->
-    <h2>Key Features</h2>
-    <ul>
-      <li>Secure login system with <strong>role-based navigation</strong> (Manager / Deliverer).</li>
-      <li>CRUD operations with <strong>PHP Data Objects (PDO)</strong> and prepared statements.</li>
-      <li><strong>Live search</strong> with AJAX and server-side filtering.</li>
-      <li><strong>Leaflet.js map integration</strong> displaying live delivery locations.</li>
-      <li>QR code generation for parcel identification and scanning workflow.</li>
-    </ul>
-    <!-- DETAILS SECTIONS -->
-    <h2>Highlighted Code Samples</h2>
-    <details>
-      <summary>Database Singleton Connection <code>(Database.php)</code></summary>
-      <pre><code>class Database {
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Secure login system with <strong>role-based navigation</strong> (Manager / Deliverer).</li>
+        <li>CRUD operations with <strong>PHP Data Objects (PDO)</strong> and prepared statements.</li>
+        <li><strong>Live search</strong> with AJAX and server-side filtering.</li>
+        <li><strong>Leaflet.js map integration</strong> displaying live delivery locations.</li>
+        <li>QR code generation for parcel identification and scanning workflow.</li>
+      </ul>
+    </section>
+    <!-- CODE SAMPLES -->
+    <section>
+      <h2>Highlighted Code Samples</h2>
+      <details>
+        <summary>Database Singleton Connection <code>(Database.php)</code></summary>
+        <pre><code>class Database {
   protected static $_dbInstance = null;
   protected $_dbHandle;
   public static function getInstance() {
@@ -70,10 +74,10 @@
     return $this->_dbHandle;
   }
 }</code></pre>
-    </details>
-    <details>
-      <summary>Fetching + Filtering Data Securely <code>(DeliveryPointDataSet.php)</code></summary>
-      <pre><code>public function searchDeliveryPointsByField($searchField, $searchValue) {
+      </details>
+      <details>
+        <summary>Fetching + Filtering Data Securely <code>(DeliveryPointDataSet.php)</code></summary>
+        <pre><code>public function searchDeliveryPointsByField($searchField, $searchValue) {
   $validFields = ['name', 'postcode', 'address_1', 'id'];
   if (!in_array($searchField, $validFields)) {
     throw new InvalidArgumentException('Invalid search field.');
@@ -88,10 +92,10 @@
   }
   return $dataSet;
 }</code></pre>
-    </details>
-    <details>
-      <summary>Login Controller with Role-Based Redirection <code>(logincontroller.php)</code></summary>
-      <pre><code>if (isset($_POST["loginbutton"])) {
+      </details>
+      <details>
+        <summary>Login Controller with Role-Based Redirection <code>(logincontroller.php)</code></summary>
+        <pre><code>if (isset($_POST["loginbutton"])) {
   $db = Database::getInstance();
   $username = $_POST["username"];
   $password = $_POST["password"];
@@ -114,10 +118,10 @@
     echo "Invalid login credentials.";
   }
 }</code></pre>
-    </details>
-    <details>
-      <summary>Interactive Map Using Leaflet.js <code>(userPage.phtml)</code></summary>
-      <pre><code>var map = L.map('map').setView([53.4576, -2.2426], 10);
+      </details>
+      <details>
+        <summary>Interactive Map Using Leaflet.js <code>(userPage.phtml)</code></summary>
+        <pre><code>var map = L.map('map').setView([53.4576, -2.2426], 10);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
@@ -126,12 +130,12 @@ L.marker([<?= $point->getLat(); ?>, <?= $point->getLng(); ?>])
   .addTo(map)
   .bindPopup(`<b><?= $point->getName(); ?></b><br>Status: <?= $point->getStatus(); ?>`);
 <?php endforeach; ?></code></pre>
-    </details>
-    <!-- BACK BUTTON -->
+      </details>
+    </section>
     <p style="text-align:center; margin-top:2rem;">
       <a href="index.html">&larr; Back to Portfolio</a>
     </p>
-  </div>
+  </main>
   <footer class="book-footer">
     <p>Parcel Buddy – Client Server Systems Assignment</p>
   </footer>
