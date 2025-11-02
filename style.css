@@ -267,3 +267,82 @@ footer {
 .design-footer a:hover {
   text-decoration: underline;
 }
+/* ==============================
+   Reusable Tech Badge Styles
+   ============================== */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.badge {
+  background: #eef2f6;
+  border: 1px solid #d0d7de;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #24292f;
+  white-space: nowrap;
+}
+
+/* ==============================
+   Expandable Details Panel
+   ============================== */
+details {
+  border: 1px solid #c9d1d9;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  background: #f6f8fa;
+  margin: 1rem 0;
+}
+
+details[open] {
+  background: #fff;
+  border-color: #8b949e;
+}
+
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Code Block Display */
+pre {
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+/* ==============================
+   Roadmap Timeline Style
+   ============================== */
+.roadmap {
+  margin: 2rem 0;
+  padding-left: 0;
+}
+
+.roadmap li {
+  list-style: none;
+  margin: 0.7rem 0;
+  border-left: 4px solid #4a90e2;
+  padding: 0.6rem 1rem;
+  background: #f5f9ff;
+  border-radius: 4px;
+}
+
+.roadmap li span {
+  font-weight: bold;
+  color: #004a99;
+}
