@@ -354,3 +354,64 @@ pre {
   font-weight: bold;
   color: #004a99;
 }
+/* ==========================
+   Education Page Styles
+   ========================== */
+.edu-section {
+  margin-bottom: 2.5rem;
+}
+
+.edu-section h2 {
+  color: #004080; /* matches portfolio headings */
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.edu-section h3 {
+  color: #0066cc;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.edu-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem; /* spacing between logo and text */
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.edu-logo {
+  height: 60px;      /* consistent height */
+  width: auto;       /* maintain aspect ratio */
+  border-radius: 6px; /* optional: rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle shadow */
+  margin-bottom: 0.5rem;
+}
+
+.edu-details p {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+
+.edu-details a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.edu-details a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure responsive layout for small screens */
+@media (max-width: 768px) {
+  .edu-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .edu-logo {
+    margin-bottom: 0.5rem;
+  }
+}
